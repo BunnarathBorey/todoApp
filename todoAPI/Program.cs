@@ -24,6 +24,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -38,7 +39,11 @@ else
     app.UseHttpsRedirection();
 }
 
-app.UseAuthentication();
-app.UseAuthorization();
+// app.UseAuthentication();
+// app.UseAuthorization();
+// app.UseRouting();
+// app.UseEndpoints(
+//     ednpoints =>
+// )
 
 app.Run();

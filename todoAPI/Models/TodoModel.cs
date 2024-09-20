@@ -7,6 +7,8 @@ namespace todoAPI.Models
 {
     public class TodoModel
     {
+        internal DateTime Updated;
+
         [Key]
         public Guid TodoId {get;set;}
         public string Title {get;set;}
